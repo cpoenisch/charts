@@ -1,0 +1,24 @@
+master:
+  componentName: jenkins-master
+  image: "jenkins/jenkins"
+  tag: "lts"
+  imagePullPolicy: "Always"
+  useSecurity: true
+  adminUser: admin
+  adminPassword: "admin"
+  resources:
+    requests:
+      cpu: "50m"
+      memory: "256Mi"
+    limits:
+      cpu: "2000m"
+      memory: "4096Mi"
+
+  JCasC:
+    configScripts:
+      welcome-message: |
+        jenkins:
+          systemMessage: Welcome to Jenkins configured and managed 'as code'.
+
+  installPlugins:
+    - ecutest:2.19
