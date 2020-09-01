@@ -18,4 +18,4 @@ master:
     configScripts:
       welcome-message: |
         jenkins:
-          systemMessage: Welcome to Jenkins configured and managed 'as code'!!!.
+          systemMessage: Welcome to Jenkins configured and managed 'as code'.
